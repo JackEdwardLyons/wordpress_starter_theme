@@ -4,10 +4,16 @@ function bst_enqueues() {
 
 	/* Styles */
 	
+    // enqueue bootstrap
 	wp_register_style('bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', false, '3.3.4', null);
 	wp_enqueue_style('bootstrap-css');
-
-  wp_register_style('main-styles', get_template_directory_uri() . '/css/main-styles.css', false, null);
+  
+    // enqueues our external font awesome stylesheet
+    wp_register_style('font-awesome', 'https://use.fontawesome.com/40696d188d.css'); 
+    wp_enqueue_style('font-awesome');
+  
+    // enqueue main styles
+    wp_register_style('main-styles', get_template_directory_uri() . '/css/main-styles.css', false, null);
 	wp_enqueue_style('main-styles');
 
 
