@@ -52,15 +52,5 @@
   </div><!-- /.container -->
 </nav>
   
-<!--
-Site Title
-==========
-If you are displaying your site title in the "brand" link in the Bootstrap navbar, 
-then you probably don't require a site title. Alternatively you can use the example below. 
-See also the accompanying CSS example in css/bst.css .
-<div class="container"> -->
-<?php 
-echo do_shortcode('[smartslider3 slider=1]');
-?>
-</div>
+
 

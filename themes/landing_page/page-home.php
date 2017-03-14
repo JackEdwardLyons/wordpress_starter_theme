@@ -27,8 +27,6 @@ get_template_part('includes/header');
     background-image: url(https://static.pexels.com/photos/24324/pexels-photo.jpg); 
     position: relative;
     height: 100%;
-
-
 }
 
 .jumbotron .btn{
@@ -36,6 +34,14 @@ get_template_part('includes/header');
     box-shadow:1px 1px 4px rgba(0,0,0,0.4);
     padding:10px 40px;
 }
+  
+  .horizontal-list {
+    list-style: none;
+    padding: 0;
+  }
+  .horizontal-list > li {
+    display: inline-block;
+  }
 </style>
 <div class="container">
    
@@ -45,7 +51,7 @@ get_template_part('includes/header');
           <h1>Jumbotron</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nunc est, tempus et venenatis id, ornare sed lorem.Curabitur sed ipsum et odio interdum pharetra nec sed libero. Sed velit massa, consectetur in mollis eget, elementum eu diam.</p>
           <p><a class="btn btn-primary btn-lg">Learn more</a></p>
-          <ul>
+          <ul class="horizontal-list">
             <li>
               <a class="btn btn-primary">
                 <span class="fa fa-2x fa-instagram"></span>
