@@ -4301,7 +4301,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   border: 1px solid transparent;
 }
 
@@ -7166,6 +7166,31 @@ Site footer
    ======================= */
 .navbar {
   margin-bottom: 0;
+}
+
+.jumbotron {
+  border-radius: 0px !important;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100%;
+}
+
+.jumbotron .btn {
+  border-radius: 0px !important;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  padding: 10px 40px;
+}
+
+.horizontal-list {
+  list-style: none;
+  padding: 0;
+}
+
+.horizontal-list > li {
+  display: inline-block;
 }
 
 /* =======================

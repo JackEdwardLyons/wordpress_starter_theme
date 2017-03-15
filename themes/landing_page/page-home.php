@@ -11,46 +11,24 @@
 $about_text       = get_field('about_text');
 $about_background = get_field('about_background');
 
+$jumbo_header     = get_field('jumbo_header');
+$jumbo_text       = get_field('jumbo_text');
+$jumbo_background = get_field('jumbo_bg');
+
 get_template_part('includes/header'); 
 ?>
 
 
 <!-- WELCOME SECTION
 ====================== -->
-<style>
-.jumbotron{
-    border-radius:0px!important;
-    box-shadow:1px 1px 4px rgba(0,0,0,0.4);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-image: url(https://static.pexels.com/photos/24324/pexels-photo.jpg); 
-    position: relative;
-    height: 100%;
-}
-
-.jumbotron .btn{
-    border-radius:0px!important;
-    box-shadow:1px 1px 4px rgba(0,0,0,0.4);
-    padding:10px 40px;
-}
-  
-  .horizontal-list {
-    list-style: none;
-    padding: 0;
-  }
-  .horizontal-list > li {
-    display: inline-block;
-  }
-</style>
 <div class="container">
    
 	<div class="row"><br>
 
-		<div class="jumbotron">
-          <h1>Jumbotron</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nunc est, tempus et venenatis id, ornare sed lorem.Curabitur sed ipsum et odio interdum pharetra nec sed libero. Sed velit massa, consectetur in mollis eget, elementum eu diam.</p>
-          <p><a class="btn btn-primary btn-lg">Learn more</a></p>
+		<div class="jumbotron" 
+             style="background: url('<?php echo $jumbo_background['url']; ?>') center; background-size: cover;">
+          <h1><?php echo $jumbo_header; ?></h1>
+          <p><?php echo $jumbo_text; ?></p>
           <ul class="horizontal-list">
             <li>
               <a class="btn btn-primary">
@@ -96,7 +74,7 @@ get_template_part('includes/header');
 <!-- if user uploaded photo -->
 <?php if( !empty($about_background) ) : ?>
 <div style="background: #FFF url('<?php echo $about_background['url']; ?>') bottom; background-size: cover;">
-
+<?php endif; ?>
     <div class="container">
       <div class="row">
 
@@ -111,7 +89,7 @@ get_template_part('includes/header');
 
 </div><!-- end background image -->
 
-<?php endif; ?>
+
 
 
 <!-- FEATURE GALLERY
